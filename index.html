@@ -20,104 +20,35 @@
       </nav>
     </header>
 
-    <main>
-      <section class="container hero">
-        <div>
-          <p class="eyebrow">Тестовое задание 1 · Lead UX/UI Designer</p>
-          <h1>UX/UI test case portfolio</h1>
-          <p class="lead">Сайт разделен на 4 задания. Сейчас опубликованы задание 1 по First User Experience DMcloud и задание 2 с UX-аудитом DataMobile.</p>
-          <div class="actions">
-            <a class="button primary" href="task-1.html">Задание 1</a>
-            <a class="button" href="datamobile-audit.html">Задание 2</a>
-            <a class="button ghost" href="#all-tasks">Все задания</a>
-          </div>
-        </div>
+    <main class="container">
+      <p class="eyebrow">Lead UX/UI Designer · Test Case</p>
+      <h1>Тестовое задание</h1>
+      <p class="lead">Работа разделена на 4 задания. Сейчас доступны первые два, остальные будут добавлены по мере получения задач.</p>
 
-        <aside class="card hero-card" aria-label="Превью onboarding">
-          <div class="setup-preview">
-            <div class="preview-row">
-              <div><strong>1. Лицензия</strong><span>Trial или купленный сертификат</span></div>
-              <span class="pill success">готово</span>
-            </div>
-            <div class="preview-row">
-              <div><strong>2. Устройство</strong><span>PIN/QR для подключения терминала</span></div>
-              <span class="pill success">найдено</span>
-            </div>
-            <div class="preview-row">
-              <div><strong>3. Привязка</strong><span>Лицензия закреплена за устройством</span></div>
-              <span class="pill warning">требует выбора</span>
-            </div>
-            <div class="preview-row">
-              <div><strong>4. Активация</strong><span>Дата старта и срок действия</span></div>
-              <span class="pill">следующий шаг</span>
-            </div>
-          </div>
-        </aside>
-      </section>
+      <section id="all-tasks" class="section grid two">
+        <a class="card info-card" href="task-1.html">
+          <span class="pill success">готово</span>
+          <h3>Задание 1 · DMcloud First User Experience</h3>
+          <p>Переосмысление первого пользовательского сценария: анализ, путь, прототип и решения.</p>
+        </a>
 
-      <section id="all-tasks" class="container section">
-        <div class="card info-card">
-          <h2>Структура по заданиям</h2>
-          <p class="section-lead">Всего будет 4 задания. Для уже выполненных заданий доступны отдельные страницы и переходы, для следующих оставлены места в общей структуре сайта.</p>
-          <div class="grid two section">
-            <article class="status-row"><div><strong>Задание 1 · DMcloud FUX</strong><span>Анализ, user flow, прототип, решения</span></div><a class="pill" href="task-1.html">открыть</a></article>
-            <article class="status-row"><div><strong>Задание 2 · DataMobile аудит</strong><span>10 UX-наблюдений с приоритетами</span></div><a class="pill" href="datamobile-audit.html">открыть</a></article>
-            <article id="task-3" class="status-row placeholder"><div><strong>Задание 3</strong><span>Будет добавлено после получения задачи</span></div><span class="pill">ожидается</span></article>
-            <article id="task-4" class="status-row placeholder"><div><strong>Задание 4</strong><span>Будет добавлено после получения задачи</span></div><span class="pill">ожидается</span></article>
-          </div>
-        </div>
-      </section>
+        <a class="card info-card" href="datamobile-audit.html">
+          <span class="pill success">готово</span>
+          <h3>Задание 2 · UX-аудит DataMobile</h3>
+          <p>Экспресс-аудит мобильного приложения для ТСД с наблюдениями, приоритетами и решениями.</p>
+        </a>
 
-      <section class="container section">
-        <div class="grid three">
-          <article class="card info-card">
-            <h3>Пользовательская цель</h3>
-            <p>Быстро понять, что нужно сделать после регистрации, подключить первый терминал и начать работу без чтения нескольких инструкций.</p>
-          </article>
-          <article class="card info-card">
-            <h3>Бизнес-цель</h3>
-            <p>Сократить время до первой ценности, снизить обращения в поддержку и повысить вероятность реального использования trial или купленной лицензии.</p>
-          </article>
-          <article class="card info-card">
-            <h3>Продуктовая гипотеза</h3>
-            <p>Guided setup с диагностикой состояния аккаунта лучше решает задачу первого запуска, чем набор статей и действий внутри таблиц.</p>
-          </article>
-        </div>
-      </section>
+        <article id="task-3" class="card info-card placeholder">
+          <span class="pill">ожидается</span>
+          <h3>Задание 3</h3>
+          <p>Будет добавлено после получения задачи.</p>
+        </article>
 
-      <section class="container section">
-        <div class="card info-card">
-          <h2>Что входит в задание 1</h2>
-          <p class="section-lead">Структура ответа по DMcloud: сначала анализ текущего опыта, затем улучшенный сценарий, прототип экранов и краткое объяснение решений.</p>
-          <div class="grid three section">
-            <a class="status-row" href="research.html"><div><strong>1. Анализ</strong><span>Где пользователь путается, что избыточно, чего не хватает</span></div><span class="pill">открыть</span></a>
-            <a class="status-row" href="journey.html"><div><strong>2. User Flow</strong><span>Путь от регистрации до активной лицензии</span></div><span class="pill">открыть</span></a>
-            <a class="status-row" href="decisions.html"><div><strong>3. Решения</strong><span>Проблемы, изменения, альтернативы и доработки</span></div><span class="pill">открыть</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="container section">
-        <div class="card info-card">
-          <p class="eyebrow">Задание 2</p>
-          <h2>UX-аудит DataMobile</h2>
-          <p class="section-lead">Экспресс-аудит мобильного приложения для ТСД: до 10 наблюдений с проблемой, причиной, возможным решением и приоритетом.</p>
-          <div class="actions">
-            <a class="button primary" href="datamobile-audit.html">Открыть аудит</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="container section">
-        <div class="card info-card">
-          <h2>Что считается успешным первым опытом</h2>
-          <p class="section-lead">Пользователь видит не пустой кабинет, а понятный маршрут. В конце маршрута лицензия активна, устройство подключено, а следующий шаг сформулирован как настройка ПО или организация устройств в группы.</p>
-          <div class="grid three section">
-            <div class="status-row"><div><strong>Лицензия</strong><span>Добавлена или оформлена как trial</span></div><span class="pill success">активна</span></div>
-            <div class="status-row"><div><strong>Устройство</strong><span>Появилось в DMcloud после PIN/QR</span></div><span class="pill success">онлайн</span></div>
-            <div class="status-row"><div><strong>Система</strong><span>Готова к настройкам ПО</span></div><span class="pill">дальше</span></div>
-          </div>
-        </div>
+        <article id="task-4" class="card info-card placeholder">
+          <span class="pill">ожидается</span>
+          <h3>Задание 4</h3>
+          <p>Будет добавлено после получения задачи.</p>
+        </article>
       </section>
     </main>
 
