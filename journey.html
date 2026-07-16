@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Пользовательский путь · DMcloud FUX</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>DMcloud FUX</span></a>
+        <div class="nav-links">
+          <a href="index.html">Главная</a>
+          <a href="research.html">Анализ</a>
+          <a class="active" href="journey.html">Путь</a>
+          <a href="prototype.html">Прототип</a>
+          <a href="decisions.html">Решения</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <p class="eyebrow">Целевой сценарий</p>
+      <h1>От регистрации до готовности к настройке системы</h1>
+      <p class="lead">Сценарий строится вокруг результата, а не вокруг разделов интерфейса. Пользователь проходит последовательность шагов, а DMcloud подсказывает, какие действия уже выполнены.</p>
+
+      <section class="section flow">
+        <article class="flow-step"><h3>Приветствие и диагностика</h3><p>Система показывает состояние аккаунта: лицензии, устройства, настройки. Если все пусто, сразу предлагает первый осмысленный шаг.</p></article>
+        <article class="flow-step"><h3>Выбор стартового пути</h3><p>Пользователь выбирает «У меня есть код сертификата» или «Хочу попробовать бесплатно». Это снимает конфликт между trial и подпиской.</p></article>
+        <article class="flow-step"><h3>Добавление лицензии</h3><p>Купленный сертификат добавляется по коду. Trial выбирается по продукту и сопровождается предупреждением: 14 дней, одно устройство, без переноса.</p></article>
+        <article class="flow-step"><h3>Подключение устройства</h3><p>Веб-интерфейс показывает PIN/QR и параллельно объясняет действия на терминале: режим «Лицензия», вход, ввод PIN или сканирование QR.</p></article>
+        <article class="flow-step"><h3>Привязка лицензии</h3><p>Пользователь выбирает найденное устройство. Интерфейс объясняет, что лицензия закрепляется за конкретным терминалом.</p></article>
+        <article class="flow-step"><h3>Активация</h3><p>Пользователь выбирает дату начала. Система автоматически показывает дату окончания и итоговое состояние до подтверждения.</p></article>
+        <article class="flow-step"><h3>Готовность к настройке</h3><p>Финальный экран подтверждает: лицензия активна, устройство подключено, можно перейти к настройкам ПО или группам устройств.</p></article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Ветвления сценария</h2>
+        <div class="grid two">
+          <article class="card info-card"><h3>Есть код сертификата</h3><p>Показать поле ввода кода, добавить лицензию в статусе «не активирована», затем вести к устройству, привязке и активации.</p></article>
+          <article class="card info-card"><h3>Нужна trial-лицензия</h3><p>Показать продукты, доступные лимиты и ограничение переноса. Trial активируется быстрее, но требует осознанного выбора устройства.</p></article>
+          <article class="card info-card"><h3>Устройство уже подключено</h3><p>Пропустить PIN/QR и сразу предложить выбрать устройство из списка. Это снижает повторные действия.</p></article>
+          <article class="card info-card"><h3>Устройства еще нет</h3><p>Показать инструкцию для терминала прямо внутри шага, не отправляя пользователя искать PIN в профиле.</p></article>
+        </div>
+      </section>
+
+      <section class="section card info-card">
+        <h2>Критерии завершения</h2>
+        <div class="grid three section">
+          <div class="status-row"><div><strong>Лицензия</strong><span>Активна и имеет понятный срок</span></div><span class="pill success">done</span></div>
+          <div class="status-row"><div><strong>Устройство</strong><span>Есть в кабинете и связано с лицензией</span></div><span class="pill success">done</span></div>
+          <div class="status-row"><div><strong>Следующий шаг</strong><span>Настройки ПО или группа устройств</span></div><span class="pill">ready</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">Пользовательский путь · DMcloud First User Experience</footer>
+  </body>
+</html>
