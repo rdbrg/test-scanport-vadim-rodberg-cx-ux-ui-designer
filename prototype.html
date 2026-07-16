@@ -4,26 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Прототип · DMcloud FUX</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Основная навигация">
-        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>DMcloud FUX</span></a>
+        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>Тестовое задание</span></a>
         <div class="nav-links">
           <a href="index.html">Главная</a>
           <a class="active" href="task-1.html">Задание 1</a>
           <a href="datamobile-audit.html">Задание 2</a>
-          <a class="muted-link" href="index.html#task-3">Задание 3</a>
-          <a class="muted-link" href="index.html#task-4">Задание 4</a>
+          <a href="task-3.html">Задание 3</a>
+          <a href="task-4.html">Задание 4</a>
         </div>
       </nav>
     </header>
 
     <main class="container">
-      <p class="eyebrow">Кликабельный сценарий</p>
+      <div class="page-kicker">
+        <a class="button" href="task-1.html">Назад</a>
+        <span class="eyebrow">Кликабельный сценарий</span>
+      </div>
       <h1>Мастер первого запуска</h1>
-      <p class="lead">Ниже показан не финальный визуальный дизайн, а логика экранов и переходов. Каждый экран отвечает на вопрос пользователя: что сейчас, зачем это нужно и что делать дальше.</p>
+      <p class="lead">Ниже показана логика экранов и переходов для первого запуска. Каждый экран отвечает на вопрос пользователя: что сейчас происходит, зачем это нужно и что делать дальше.</p>
 
       <nav class="prototype-nav" aria-label="Экраны прототипа">
         <a href="#welcome">1. Старт</a>
@@ -38,7 +42,7 @@
       <section id="welcome" class="screen">
         <div class="screen-header"><div><span class="pill">Шаг 1 из 7</span><h2>Добро пожаловать в DMcloud</h2></div><span class="pill warning">аккаунт пустой</span></div>
         <div class="screen-body">
-          <div class="mock-panel"><h3>Состояние аккаунта</h3><div class="mock-field"><span>Лицензии</span><strong>0</strong></div><div class="mock-field"><span>Устройства</span><strong>0</strong></div><div class="mock-field"><span>Настройки ПО</span><strong>не применялись</strong></div><div class="actions"><a class="button primary" href="#license-choice">Начать настройку</a></div></div>
+          <div class="mock-panel"><h3>Состояние аккаунта</h3><div class="mock-field"><span>Лицензии</span><strong>0</strong></div><div class="mock-field"><span>Устройства</span><strong>0</strong></div><div class="mock-field"><span>Настройки приложения</span><strong>еще не применялись</strong></div><div class="actions"><a class="button primary" href="#license-choice">Начать настройку</a></div></div>
           <aside class="mock-panel"><h3>Почему этот шаг нужен</h3><p>Пользователь сразу видит, что кабинет еще не готов к работе, и получает один основной маршрут вместо пустых таблиц.</p><p class="note">Если аккаунт уже содержит лицензии или устройства, мастер должен автоматически отметить эти шаги выполненными.</p></aside>
         </div>
       </section>
@@ -47,26 +51,26 @@
         <div class="screen-header"><div><span class="pill">Шаг 2 из 7</span><h2>Как вы хотите начать?</h2></div><span class="pill">выбор пути</span></div>
         <div class="screen-body">
           <div class="grid two">
-            <article class="mock-panel"><h3>У меня есть код сертификата</h3><p>Подходит для купленной лицензии по подписке. Код был отправлен на почту после покупки.</p><div class="actions"><a class="button primary" href="#add-license">Добавить сертификат</a></div></article>
-            <article class="mock-panel"><h3>Хочу попробовать бесплатно</h3><p>Trial-лицензия активируется на 14 дней и привязывается к одному устройству без переноса.</p><div class="actions"><a class="button" href="#add-license">Выбрать trial</a></div></article>
+            <article class="mock-panel"><h3>У меня есть код сертификата</h3><p>Подходит для купленной лицензии по подписке. Код приходит на почту после покупки.</p><div class="actions"><a class="button primary" href="#add-license">Добавить сертификат</a></div></article>
+            <article class="mock-panel"><h3>Хочу попробовать бесплатно</h3><p>Пробная лицензия действует 14 дней и закрепляется за одним устройством.</p><div class="actions"><a class="button" href="#add-license">Выбрать пробную лицензию</a></div></article>
           </div>
-          <aside class="mock-panel"><h3>Решение</h3><p>Разделяем два бизнес-сценария в начале. Пользователь не должен сам понимать различия между trial и подпиской из документации.</p></aside>
+          <aside class="mock-panel"><h3>Решение</h3><p>Сразу разделяем два понятных сценария: купленная лицензия или бесплатная пробная версия. Пользователю не нужно искать различия в документации.</p></aside>
         </div>
       </section>
 
       <section id="add-license" class="screen">
         <div class="screen-header"><div><span class="pill">Шаг 3 из 7</span><h2>Добавьте лицензию</h2></div><span class="pill warning">требует данных</span></div>
         <div class="screen-body">
-          <div class="mock-panel"><h3>Вариант: сертификат по подписке</h3><div class="mock-field"><span>Код сертификата</span><strong>DM-XXXX-XXXX</strong></div><div class="actions"><a class="button primary" href="#connect-device">Добавить и продолжить</a></div><p class="note">После добавления лицензия появляется в списке как не активированная. Дальше ее нужно привязать к устройству и активировать.</p></div>
-          <aside class="mock-panel"><h3>Вариант: trial</h3><div class="mock-field"><span>Продукт</span><strong>DataMobile</strong></div><div class="mock-field"><span>Срок</span><strong>14 дней</strong></div><div class="mock-field"><span>Ограничение</span><strong>одно устройство</strong></div><p class="note">Для trial важно предупредить до выбора устройства: перенос на другой терминал невозможен.</p></aside>
+          <div class="mock-panel"><h3>Вариант: сертификат по подписке</h3><div class="mock-field"><span>Код сертификата</span><strong>DM-XXXX-XXXX</strong></div><div class="actions"><a class="button primary" href="#connect-device">Добавить и продолжить</a></div><p class="note">После добавления лицензия появляется в списке как не активированная. Дальше ее нужно закрепить за устройством и активировать.</p></div>
+          <aside class="mock-panel"><h3>Вариант: пробная лицензия</h3><div class="mock-field"><span>Продукт</span><strong>DataMobile</strong></div><div class="mock-field"><span>Срок</span><strong>14 дней</strong></div><div class="mock-field"><span>Ограничение</span><strong>одно устройство</strong></div><p class="note">Важно предупредить до выбора устройства: пробную лицензию нельзя перенести на другое устройство.</p></aside>
         </div>
       </section>
 
       <section id="connect-device" class="screen">
-        <div class="screen-header"><div><span class="pill">Шаг 4 из 7</span><h2>Подключите устройство к кабинету</h2></div><span class="pill warning">ожидаем терминал</span></div>
+        <div class="screen-header"><div><span class="pill">Шаг 4 из 7</span><h2>Подключите устройство к кабинету</h2></div><span class="pill warning">ожидаем устройство</span></div>
         <div class="screen-body">
-          <div class="mock-panel"><h3>PIN-код подтверждения</h3><div class="mock-field"><span>PIN</span><strong>482 913</strong></div><div class="qr" aria-label="QR-код"></div><div class="actions"><a class="button primary" href="#assign-license">Устройство появилось</a></div></div>
-          <aside class="mock-panel"><h3>Что сделать на терминале</h3><ul class="list"><li>Открыть приложение на вкладке «Лицензии».</li><li>Если включен режим «Демо», сменить его на «Лицензия».</li><li>Нажать «Войти» и ввести PIN или отсканировать QR.</li><li>Проверить, что в приложении появился номер личного кабинета.</li></ul><p class="note">PIN находится не в профиле, а прямо в нужном шаге onboarding.</p></aside>
+          <div class="mock-panel"><h3>PIN-код подтверждения</h3><div class="mock-field"><span>PIN</span><strong>482 913</strong></div><div class="qr" aria-label="QR-код для подключения"><strong>QR-код</strong><span>для подключения устройства</span></div><div class="actions"><a class="button primary" href="#assign-license">Устройство появилось</a></div></div>
+          <aside class="mock-panel"><h3>Что сделать на устройстве</h3><ul class="list"><li>Открыть приложение DataMobile.</li><li>Перейти в раздел лицензии или подключения.</li><li>Ввести PIN или отсканировать QR-код.</li><li>Проверить, что устройство появилось в кабинете DMcloud.</li></ul><p class="note">PIN и QR-код показаны прямо в шаге подключения. Пользователю не нужно искать их в профиле.</p></aside>
         </div>
       </section>
 
@@ -74,23 +78,23 @@
         <div class="screen-header"><div><span class="pill">Шаг 5 из 7</span><h2>Закрепите лицензию за устройством</h2></div><span class="pill">выбор устройства</span></div>
         <div class="screen-body">
           <div class="mock-panel"><h3>Найденные устройства</h3><div class="mock-field"><span>ТСД-01 · ID 7F42-A91C</span><strong>активен</strong></div><div class="mock-field"><span>Группа</span><strong>По умолчанию</strong></div><div class="actions"><a class="button primary" href="#activate-license">Выбрать и продолжить</a></div></div>
-          <aside class="mock-panel"><h3>Что объясняем</h3><p>Привязка означает, что лицензия будет использоваться на конкретном терминале. Для временных лицензий важно показать возможность отвязки только там, где она действительно доступна.</p><p class="note">Для trial добавить явное предупреждение: после активации перенос на другой терминал невозможен.</p></aside>
+          <aside class="mock-panel"><h3>Что объясняем</h3><p>Привязка означает, что лицензия будет использоваться на выбранном устройстве. Пользователь должен понять это до подтверждения.</p><p class="note">Для пробной лицензии нужно явно предупредить: после активации перенос на другое устройство невозможен.</p></aside>
         </div>
       </section>
 
       <section id="activate-license" class="screen">
-        <div class="screen-header"><div><span class="pill">Шаг 6 из 7</span><h2>Активируйте лицензию</h2></div><span class="pill warning">последнее действие</span></div>
+        <div class="screen-header"><div><span class="pill">Шаг 6 из 7</span><h2>Активируйте лицензию</h2></div><span class="pill warning">финальный шаг</span></div>
         <div class="screen-body">
-          <div class="mock-panel"><h3>Дата старта</h3><div class="mock-field"><span>Начало</span><strong>Сегодня, 16.07.2026</strong></div><div class="mock-field"><span>Окончание</span><strong>16.08.2026</strong></div><div class="mock-field"><span>Устройство</span><strong>ТСД-01</strong></div><div class="actions"><a class="button primary" href="#success">Активировать</a></div></div>
-          <aside class="mock-panel"><h3>Почему лучше так</h3><p>Вместо иконки «треугольник» в колонке «Период» пользователь видит прямое действие: выбрать дату старта лицензии. Дата окончания рассчитывается до подтверждения.</p></aside>
+          <div class="mock-panel"><h3>Параметры активации</h3><div class="mock-field"><span>Начало</span><strong>Сегодня, 16.07.2026</strong></div><div class="mock-field"><span>Окончание</span><strong>16.08.2026</strong></div><div class="mock-field"><span>Устройство</span><strong>ТСД-01</strong></div><div class="actions"><a class="button primary" href="#success">Активировать</a></div></div>
+          <aside class="mock-panel"><h3>Почему лучше так</h3><p>Вместо скрытого действия в таблице пользователь видит прямой шаг: выбрать дату старта лицензии. Дата окончания показывается до подтверждения, поэтому пользователь понимает срок действия заранее.</p></aside>
         </div>
       </section>
 
       <section id="success" class="screen">
         <div class="screen-header"><div><span class="pill success">Шаг 7 из 7</span><h2>Базовая настройка завершена</h2></div><span class="pill success">готово</span></div>
         <div class="screen-body">
-          <div class="mock-panel"><h3>Итог</h3><div class="mock-field"><span>Лицензия DataMobile</span><strong>активна</strong></div><div class="mock-field"><span>Устройство ТСД-01</span><strong>подключено</strong></div><div class="mock-field"><span>Следующий шаг</span><strong>настройки ПО</strong></div><div class="actions"><a class="button primary" href="decisions.html">Смотреть аргументацию</a><a class="button" href="journey.html">Вернуться к пути</a></div></div>
-          <aside class="mock-panel"><h3>Куда вести дальше</h3><p>После первой ценности не нужно сразу перегружать пользователя всеми возможностями. Достаточно предложить два понятных направления: настроить ПО для устройства или создать группу устройств для масштабирования.</p></aside>
+          <div class="mock-panel"><h3>Итог</h3><div class="mock-field"><span>Лицензия DataMobile</span><strong>активна</strong></div><div class="mock-field"><span>Устройство ТСД-01</span><strong>подключено</strong></div><div class="mock-field"><span>Следующий шаг</span><strong>настроить приложение</strong></div><div class="actions"><a class="button primary" href="decisions.html">Смотреть аргументацию</a><a class="button" href="journey.html">Вернуться к пути</a></div></div>
+          <aside class="mock-panel"><h3>Куда вести дальше</h3><p>После первого успешного результата не нужно показывать все возможности сразу. Достаточно предложить два понятных шага: настроить приложение для устройства или создать группу устройств для дальнейшей работы.</p></aside>
         </div>
       </section>
     </main>

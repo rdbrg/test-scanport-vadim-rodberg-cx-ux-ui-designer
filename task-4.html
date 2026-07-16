@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 4 · Центр уведомлений DataMobile</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>Тестовое задание</span></a>
+        <div class="nav-links">
+          <a href="index.html">Главная</a>
+          <a href="task-1.html">Задание 1</a>
+          <a href="datamobile-audit.html">Задание 2</a>
+          <a href="task-3.html">Задание 3</a>
+          <a class="active" href="task-4.html">Задание 4</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <p class="eyebrow">Задание 4 · Центр уведомлений</p>
+      <h1>Центр уведомлений DataMobile</h1>
+      <p class="lead">Единый сценарий для системных уведомлений и сообщений из учетной системы. Цель — показать важное вовремя, но не ломать рабочий поток на ТСД.</p>
+
+      <section class="section grid three">
+        <article class="card info-card">
+          <h3>Не все уведомления одинаково важны</h3>
+          <p>Уведомления делятся по срочности. Критичные прерывают работу, остальные остаются в центре уведомлений и не мешают сканированию.</p>
+        </article>
+        <article class="card info-card">
+          <h3>Рабочий экран остается главным</h3>
+          <p>Пользователь может быть в документе, инвентаризации или приемке. Уведомление не должно закрывать контекст без необходимости.</p>
+        </article>
+        <article class="card info-card">
+          <h3>История всегда доступна</h3>
+          <p>Все уведомления сохраняются в истории. Пользователь видит новые, непрочитанные, отложенные и обработанные сообщения.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Типы и приоритеты</h2>
+        <div class="grid three">
+          <article class="card info-card">
+            <span class="pill danger">критично</span>
+            <h3>Критичные</h3>
+            <ul class="list">
+              <li>критическая ошибка синхронизации;</li>
+              <li>невозможно продолжить операцию;</li>
+              <li>требуется действие для сохранения данных.</li>
+            </ul>
+            <p>Показывать сразу: модальное или полноэкранное предупреждение. Действия: «Повторить», «Работать offline», «Открыть детали».</p>
+          </article>
+          <article class="card info-card">
+            <span class="pill warning">важно</span>
+            <h3>Важные</h3>
+            <ul class="list">
+              <li>сообщение руководителя;</li>
+              <li>нужно загрузить справочники;</li>
+              <li>низкий заряд батареи.</li>
+            </ul>
+            <p>Показывать компактным баннером. Не закрывать сканирование. Действия: «Открыть», «Позже», «Отметить прочитанным».</p>
+          </article>
+          <article class="card info-card">
+            <span class="pill success">инфо</span>
+            <h3>Информационные</h3>
+            <ul class="list">
+              <li>доступно обновление приложения;</li>
+              <li>сообщение из 1С/ERP;</li>
+              <li>завершена фоновая операция.</li>
+            </ul>
+            <p>Не прерывать работу. Увеличить бейдж в иконке уведомлений и сохранить сообщение в истории.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section grid two">
+        <article class="card info-card">
+          <h2>Как пользователь узнает о новом уведомлении</h2>
+          <ul class="list">
+            <li><strong>Иконка уведомлений:</strong> бейдж с количеством непрочитанных.</li>
+            <li><strong>Короткий баннер:</strong> для важных уведомлений, исчезает или сворачивается.</li>
+            <li><strong>Модальное окно:</strong> только для критичных ситуаций.</li>
+            <li><strong>Звук/вибрация:</strong> для критичных и важных, если разрешено настройками.</li>
+          </ul>
+          <p class="note">На ТСД визуальный сигнал должен быть крупным и коротким, без длинного текста.</p>
+        </article>
+
+        <article class="mock-panel">
+          <h2>Центр уведомлений</h2>
+          <div class="actions">
+            <span class="pill">Все</span>
+            <span class="pill">Непрочитанные</span>
+            <span class="pill">Системные</span>
+            <span class="pill">Сообщения</span>
+          </div>
+          <div class="mock-field"><span>Ошибка синхронизации</span><strong>критично · новое</strong></div>
+          <div class="mock-field"><span>Сообщение руководителя</span><strong>важно · новое</strong></div>
+          <div class="mock-field"><span>Доступно обновление</span><strong>инфо · отложено</strong></div>
+          <p class="note">Карточка содержит тип, приоритет, время, короткий текст, статус и действия: «Открыть», «Отложить», «Прочитано». История группируется: сегодня, вчера, ранее.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">User Flow</h2>
+        <div class="flow">
+          <article class="flow-step"><h3>1. Уведомление приходит на любом экране</h3><p>Пользователь остается в текущей операции, пока система определяет приоритет.</p></article>
+          <article class="flow-step"><h3>2. Система определяет тип и приоритет</h3><p>Критичное, важное или информационное.</p></article>
+          <article class="flow-step"><h3>3. Критичное прерывает работу</h3><p>Если есть риск потери данных или операция заблокирована.</p></article>
+          <article class="flow-step"><h3>4. Важное попадает в непрочитанные</h3><p>Показывается баннер, который не закрывает сканирование.</p></article>
+          <article class="flow-step"><h3>5. Информационное увеличивает бейдж</h3><p>Пользователь может прочитать его позже.</p></article>
+          <article class="flow-step"><h3>6. Пользователь открывает центр уведомлений</h3><p>Просматривает, фильтрует, открывает детали или отмечает прочитанным.</p></article>
+          <article class="flow-step"><h3>7. История сохраняет обработанные уведомления</h3><p>Статусы: новое, непрочитано, отложено, прочитано.</p></article>
+        </div>
+      </section>
+
+      <section class="section compare">
+        <article class="card info-card bad">
+          <h3>Прерывает работу</h3>
+          <ul class="list">
+            <li>риск потери данных;</li>
+            <li>критическая ошибка синхронизации;</li>
+            <li>действие невозможно продолжить;</li>
+            <li>требуется обязательная реакция.</li>
+          </ul>
+        </article>
+        <article class="card info-card good">
+          <h3>Можно отложить</h3>
+          <ul class="list">
+            <li>сообщение руководителя без срочного действия;</li>
+            <li>доступное обновление;</li>
+            <li>информационное сообщение из ERP;</li>
+            <li>загрузку справочников, если текущая операция не заблокирована.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Обязательные состояния</h2>
+        <div class="grid two">
+          <article class="card info-card"><h3>Нет уведомлений</h3><p>Пустое состояние: «Новых уведомлений нет».</p></article>
+          <article class="card info-card"><h3>Есть новые</h3><p>Бейдж на иконке уведомлений.</p></article>
+          <article class="card info-card"><h3>Непрочитанные</h3><p>Отдельный фильтр и визуальный статус.</p></article>
+          <article class="card info-card"><h3>Критическое</h3><p>Блокирующий экран с обязательным действием.</p></article>
+          <article class="card info-card"><h3>Ошибка истории</h3><p>Показать повторную загрузку.</p></article>
+          <article class="card info-card"><h3>Offline</h3><p>Локальная история доступна, серверные сообщения придут после синхронизации.</p></article>
+          <article class="card info-card"><h3>Отложено</h3><p>Уведомление не пропадает, есть срок или напоминание.</p></article>
+          <article class="card info-card"><h3>Прочитано</h3><p>Остается в истории.</p></article>
+        </div>
+      </section>
+
+      <section class="section card info-card">
+        <span class="pill warning">сценарий</span>
+        <h2>Одновременно пришли: сообщение руководителя, ошибка синхронизации, обновление приложения</h2>
+        <div class="flow section">
+          <article class="flow-step"><h3>1. Ошибка синхронизации</h3><p>Показать сразу как критичную. Она влияет на сохранность операции.</p></article>
+          <article class="flow-step"><h3>2. Сообщение руководителя</h3><p>Показать после обработки ошибки или оставить важным уведомлением в очереди.</p></article>
+          <article class="flow-step"><h3>3. Обновление приложения</h3><p>Не показывать сразу. Положить в центр уведомлений как информационное.</p></article>
+        </div>
+        <p>Система сначала защищает данные и рабочий процесс. На экране показывается модальное окно ошибки синхронизации, в иконке уведомлений бейдж «3». После решения ошибки пользователь видит сообщение руководителя как непрочитанное важное, обновление остается в истории.</p>
+      </section>
+
+      <section class="section card info-card">
+        <h2>Использование AI</h2>
+        <p>AI использовался как рабочий инструмент для структурирования материалов, проверки полноты сценариев и черновой формулировки блоков. Ключевые решения — приоритеты уведомлений, правила прерывания работы, логика истории и сценарий одновременных уведомлений — выбраны и отредактированы мной.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Вадим Родберг · старший продуктовый дизайнер</strong>
+      <div class="footer-contacts"><a href="tel:+79643371333">+7 964 337-13-33</a><span>·</span><a href="mailto:vadimrodberg@gmail.com">vadimrodberg@gmail.com</a><span>·</span><a href="https://t.me/VadimRodberg">@VadimRodberg</a></div>
+    </footer>
+  </body>
+</html>

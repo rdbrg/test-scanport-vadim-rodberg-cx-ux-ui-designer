@@ -4,24 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пользовательский путь · DMcloud FUX</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Основная навигация">
-        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>DMcloud FUX</span></a>
+        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>Тестовое задание</span></a>
         <div class="nav-links">
           <a href="index.html">Главная</a>
           <a class="active" href="task-1.html">Задание 1</a>
           <a href="datamobile-audit.html">Задание 2</a>
-          <a class="muted-link" href="index.html#task-3">Задание 3</a>
-          <a class="muted-link" href="index.html#task-4">Задание 4</a>
+          <a href="task-3.html">Задание 3</a>
+          <a href="task-4.html">Задание 4</a>
         </div>
       </nav>
     </header>
 
     <main class="container">
-      <p class="eyebrow">Целевой сценарий</p>
+      <div class="page-kicker">
+        <a class="button" href="task-1.html">Назад</a>
+        <span class="eyebrow">Целевой сценарий</span>
+      </div>
       <h1>От регистрации до готовности к настройке системы</h1>
       <p class="lead">Сценарий строится вокруг результата, а не вокруг разделов интерфейса. Пользователь проходит последовательность шагов, а DMcloud подсказывает, какие действия уже выполнены.</p>
 
@@ -29,8 +33,8 @@
         <article class="flow-step"><h3>Приветствие и диагностика</h3><p>Система показывает состояние аккаунта: лицензии, устройства, настройки. Если все пусто, сразу предлагает первый осмысленный шаг.</p></article>
         <article class="flow-step"><h3>Выбор стартового пути</h3><p>Пользователь выбирает «У меня есть код сертификата» или «Хочу попробовать бесплатно». Это снимает конфликт между trial и подпиской.</p></article>
         <article class="flow-step"><h3>Добавление лицензии</h3><p>Купленный сертификат добавляется по коду. Trial выбирается по продукту и сопровождается предупреждением: 14 дней, одно устройство, без переноса.</p></article>
-        <article class="flow-step"><h3>Подключение устройства</h3><p>Веб-интерфейс показывает PIN/QR и параллельно объясняет действия на терминале: режим «Лицензия», вход, ввод PIN или сканирование QR.</p></article>
-        <article class="flow-step"><h3>Привязка лицензии</h3><p>Пользователь выбирает найденное устройство. Интерфейс объясняет, что лицензия закрепляется за конкретным терминалом.</p></article>
+        <article class="flow-step"><h3>Подключение устройства</h3><p>Веб-интерфейс показывает PIN/QR и параллельно объясняет действия на ТСД: режим «Лицензия», вход, ввод PIN или сканирование QR.</p></article>
+        <article class="flow-step"><h3>Привязка лицензии</h3><p>Пользователь выбирает найденное устройство. Интерфейс объясняет, что лицензия закрепляется за конкретным ТСД.</p></article>
         <article class="flow-step"><h3>Активация</h3><p>Пользователь выбирает дату начала. Система автоматически показывает дату окончания и итоговое состояние до подтверждения.</p></article>
         <article class="flow-step"><h3>Готовность к настройке</h3><p>Финальный экран подтверждает: лицензия активна, устройство подключено, можно перейти к настройкам ПО или группам устройств.</p></article>
       </section>
@@ -41,7 +45,7 @@
           <article class="card info-card"><h3>Есть код сертификата</h3><p>Показать поле ввода кода, добавить лицензию в статусе «не активирована», затем вести к устройству, привязке и активации.</p></article>
           <article class="card info-card"><h3>Нужна trial-лицензия</h3><p>Показать продукты, доступные лимиты и ограничение переноса. Trial активируется быстрее, но требует осознанного выбора устройства.</p></article>
           <article class="card info-card"><h3>Устройство уже подключено</h3><p>Пропустить PIN/QR и сразу предложить выбрать устройство из списка. Это снижает повторные действия.</p></article>
-          <article class="card info-card"><h3>Устройства еще нет</h3><p>Показать инструкцию для терминала прямо внутри шага, не отправляя пользователя искать PIN в профиле.</p></article>
+          <article class="card info-card"><h3>Устройства еще нет</h3><p>Показать инструкцию для ТСД прямо внутри шага, не отправляя пользователя искать PIN в профиле.</p></article>
         </div>
       </section>
 

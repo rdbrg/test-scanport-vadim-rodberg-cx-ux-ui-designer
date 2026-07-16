@@ -4,18 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DMcloud First User Experience</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Основная навигация">
-        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>DMcloud FUX</span></a>
+        <a class="brand" href="index.html"><span class="brand-mark">DM</span><span>Тестовое задание</span></a>
         <div class="nav-links">
           <a class="active" href="index.html">Главная</a>
           <a href="task-1.html">Задание 1</a>
           <a href="datamobile-audit.html">Задание 2</a>
-          <a class="muted-link" href="index.html#task-3">Задание 3</a>
-          <a class="muted-link" href="index.html#task-4">Задание 4</a>
+          <a href="task-3.html">Задание 3</a>
+          <a href="task-4.html">Задание 4</a>
         </div>
       </nav>
     </header>
@@ -23,13 +24,12 @@
     <main>
       <section class="container hero home-hero">
         <div>
-          <p class="eyebrow">Lead UX/UI Designer · Product Design</p>
+          <div class="hero-person">
+            <img class="hero-photo" src="assets/foto.png" alt="Вадим Родберг">
+            <p class="eyebrow">Lead UX/UI Designer · Product Design</p>
+          </div>
           <h1>Вадим Родберг</h1>
           <p class="lead">Старший продуктовый дизайнер. Проектирую сложные B2B/B2C-сценарии, превращаю разрозненные пользовательские шаги в понятные продуктовые процессы и довожу решения до состояния, готового к реализации.</p>
-          <div class="actions">
-            <a class="button primary" href="task-1.html">Смотреть задание 1</a>
-            <a class="button" href="datamobile-audit.html">Смотреть задание 2</a>
-          </div>
         </div>
 
         <aside class="card candidate-card">
@@ -54,17 +54,17 @@
           <p>Экспресс-аудит мобильного приложения для ТСД с наблюдениями, приоритетами и решениями.</p>
         </a>
 
-        <article id="task-3" class="card info-card placeholder">
-          <span class="pill">ожидается</span>
-          <h3>Задание 3</h3>
-          <p>Будет добавлено после получения задачи.</p>
-        </article>
+        <a id="task-3" class="card info-card" href="task-3.html">
+          <span class="pill success">готово</span>
+          <h3>Задание 3 · Первое впечатление от документации</h3>
+          <p>4 ответа о сложности первого знакомства, недостающих материалах и приоритетных улучшениях документации.</p>
+        </a>
 
-        <article id="task-4" class="card info-card placeholder">
-          <span class="pill">ожидается</span>
-          <h3>Задание 4</h3>
-          <p>Будет добавлено после получения задачи.</p>
-        </article>
+        <a id="task-4" class="card info-card" href="task-4.html">
+          <span class="pill success">готово</span>
+          <h3>Задание 4 · Центр уведомлений DataMobile</h3>
+          <p>Концепция единого центра уведомлений: приоритеты, история, состояния и поведение при нескольких событиях.</p>
+        </a>
       </section>
     </main>
 
