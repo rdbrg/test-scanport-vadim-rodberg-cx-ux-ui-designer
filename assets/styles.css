@@ -412,6 +412,28 @@ p {
   margin-top: 8px;
 }
 
+.plain-points {
+  margin: 18px 0 0;
+  padding-left: 24px;
+}
+
+.plain-points li {
+  color: var(--muted);
+}
+
+.plain-points li + li {
+  margin-top: 16px;
+}
+
+.plain-points strong {
+  color: var(--text);
+}
+
+.plain-points .pill {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 .flow {
   display: grid;
   gap: 14px;
