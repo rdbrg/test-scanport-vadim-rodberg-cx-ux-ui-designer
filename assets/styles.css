@@ -91,6 +91,10 @@ a {
   background: #e8f0ff;
 }
 
+.nav-links a.muted-link {
+  color: #97a1b4;
+}
+
 .container {
   max-width: 1180px;
   margin: 0 auto;
@@ -446,6 +450,33 @@ p {
   border-top: 1px solid var(--line);
   color: var(--muted);
   text-align: center;
+}
+
+.footer strong {
+  display: block;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer-contacts a,
+.footer-contacts span {
+  color: var(--muted);
+}
+
+.footer-contacts a:hover {
+  color: var(--primary-dark);
+}
+
+.placeholder {
+  opacity: 0.72;
 }
 
 @media (max-width: 860px) {
